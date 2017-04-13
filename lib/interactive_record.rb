@@ -44,6 +44,8 @@ class InteractiveRecord
     values.join(", ")
   end
 
+  #column name refers to instance variable - send is the same thing as self.
+
   def col_names_for_insert
     self.class.column_names.delete_if {|col| col == "id"}.join(", ")
   end
